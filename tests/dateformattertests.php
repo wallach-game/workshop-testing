@@ -45,8 +45,8 @@ final class calculatortest extends TestCase
         $date = new DateTime();
         $date->setTime(14, 0);
         $this->assertEquals(
-            "Afternoon",
-            $dateFormatter->getPartOfDay($date)
+            "Evening",
+            $dateFormatter->getPartOfDay()
         );
     }
 }
