@@ -11,9 +11,15 @@ class DateFormatter
      *
      * @return string
      */
-    public function getPartOfDay() : string
+    public function getPartOfDay($_dateTime = null) : string
     {
-        $dateTime    = new DateTime();
+        $dateTime = new DateTime();
+
+        if($_dateTime != null)
+        {
+            $dateTime = $_dateTime;
+        }
+
         $currentHour = $dateTime->format('G');
 
         if ($currentHour >= 0 && $currentHour < 6)
